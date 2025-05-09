@@ -1,0 +1,150 @@
+/**
+ * Mermaid-MCP 默认CSS模板
+ * 适用于各种图表类型的基础样式
+ */
+
+/* 全局样式 */
+body {
+    font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* 容器样式 */
+.chart-container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 100%;
+    overflow: auto;
+}
+
+/* 标题样式 */
+.chart-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* 节点通用样式 */
+.node {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #f8f9fa;
+    border: 2px solid #4b90e2;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+    min-width: 100px;
+}
+
+/* 不同类型节点样式 */
+.node.start {
+    background-color: #e3f2fd;
+    border-color: #2196f3;
+}
+
+.node.end {
+    background-color: #e8f5e9;
+    border-color: #4caf50;
+}
+
+.node.process {
+    background-color: #ffffff;
+    border-color: #9e9e9e;
+}
+
+.node.decision {
+    background-color: #fff8e1;
+    border-color: #ffc107;
+    border-radius: 4px;
+    transform: rotate(45deg);
+}
+
+.node.decision span {
+    display: inline-block;
+    transform: rotate(-45deg);
+}
+
+/* 连接线样式 */
+.edge {
+    stroke: #78909c;
+    stroke-width: 2px;
+    fill: none;
+    marker-end: url(#arrowhead);
+}
+
+.edge-text {
+    font-size: 12px;
+    fill: #546e7a;
+    text-anchor: middle;
+}
+
+/* 箭头样式 */
+.arrow {
+    fill: #78909c;
+}
+
+/* 序列图特殊样式 */
+.actor {
+    fill: #e3f2fd;
+    stroke: #2196f3;
+    stroke-width: 2px;
+}
+
+.message {
+    stroke: #78909c;
+    stroke-width: 1.5px;
+    marker-end: url(#arrowhead);
+}
+
+/* 甘特图特殊样式 */
+.task {
+    fill: #bbdefb;
+    stroke: #2196f3;
+    stroke-width: 1px;
+}
+
+.milestone {
+    fill: #ffcdd2;
+    stroke: #f44336;
+    stroke-width: 1px;
+}
+
+/* 饼图特殊样式 */
+.pie-slice {
+    stroke: #ffffff;
+    stroke-width: 1px;
+}
+
+/* 类图特殊样式 */
+.class {
+    fill: #e8f5e9;
+    stroke: #4caf50;
+    stroke-width: 2px;
+}
+
+.relationship {
+    stroke: #78909c;
+    stroke-width: 1.5px;
+    marker-end: url(#arrowhead);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .chart-title {
+        font-size: 20px;
+    }
+    
+    .node {
+        padding: 8px 12px;
+        min-width: 80px;
+    }
+} 

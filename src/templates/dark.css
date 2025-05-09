@@ -1,0 +1,159 @@
+/**
+ * Mermaid-MCP 暗色主题CSS模板
+ * 适用于各种图表类型的暗色样式
+ */
+
+/* 全局样式 */
+body {
+    font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    line-height: 1.6;
+}
+
+/* 容器样式 */
+.chart-container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 100%;
+    overflow: auto;
+}
+
+/* 标题样式 */
+.chart-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #89b4fa;
+}
+
+/* 节点通用样式 */
+.node {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #313244;
+    border: 2px solid #89b4fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+    min-width: 100px;
+    color: #cdd6f4;
+}
+
+/* 不同类型节点样式 */
+.node.start {
+    background-color: #45475a;
+    border-color: #89b4fa;
+}
+
+.node.end {
+    background-color: #45475a;
+    border-color: #a6e3a1;
+}
+
+.node.process {
+    background-color: #313244;
+    border-color: #f5c2e7;
+}
+
+.node.decision {
+    background-color: #45475a;
+    border-color: #fab387;
+    border-radius: 4px;
+    transform: rotate(45deg);
+}
+
+.node.decision span {
+    display: inline-block;
+    transform: rotate(-45deg);
+}
+
+/* 连接线样式 */
+.edge {
+    stroke: #7f849c;
+    stroke-width: 2px;
+    fill: none;
+    marker-end: url(#arrowhead);
+}
+
+.edge-text {
+    font-size: 12px;
+    fill: #bac2de;
+    text-anchor: middle;
+}
+
+/* 箭头样式 */
+.arrow {
+    fill: #7f849c;
+}
+
+/* 序列图特殊样式 */
+.actor {
+    fill: #313244;
+    stroke: #89b4fa;
+    stroke-width: 2px;
+}
+
+.message {
+    stroke: #7f849c;
+    stroke-width: 1.5px;
+    marker-end: url(#arrowhead);
+}
+
+/* 甘特图特殊样式 */
+.task {
+    fill: #313244;
+    stroke: #89b4fa;
+    stroke-width: 1px;
+}
+
+.milestone {
+    fill: #313244;
+    stroke: #f38ba8;
+    stroke-width: 1px;
+}
+
+/* 饼图特殊样式 */
+.pie-slice {
+    stroke: #181825;
+    stroke-width: 1px;
+}
+
+/* 类图特殊样式 */
+.class {
+    fill: #313244;
+    stroke: #a6e3a1;
+    stroke-width: 2px;
+}
+
+.relationship {
+    stroke: #7f849c;
+    stroke-width: 1.5px;
+    marker-end: url(#arrowhead);
+}
+
+/* 强调色 */
+.accent1 { color: #f38ba8; }
+.accent2 { color: #fab387; }
+.accent3 { color: #f9e2af; }
+.accent4 { color: #a6e3a1; }
+.accent5 { color: #74c7ec; }
+.accent6 { color: #cba6f7; }
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .chart-title {
+        font-size: 20px;
+    }
+    
+    .node {
+        padding: 8px 12px;
+        min-width: 80px;
+    }
+} 
